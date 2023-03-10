@@ -1,0 +1,26 @@
+Results for the extraLargeArray
+insert 994.2815 ms
+append 2.7464 ms
+
+
+Results for the largeArray
+insert 9.2142 ms
+append 490.8 μs
+
+Results for the mediumArray
+insert 171.4 μs
+append 127.2 μs
+
+Results for the smallArray
+insert 46.8 μs
+append 97.4 μs
+
+
+Results for the tinyArray
+insert 36.7 μs
+append 86.6 μs
+
+
+Append scales better with larger numbers being able to run it faster but when it comes to lower numbers such as smallarray and tiny array insert was actually able to run it faster. From what I can see form the data the .push() is able to push large amounts of data faster and unshift can do small data faster. 
+
+For extra credit: From my research when you use unshift it adds the element to the front of the array at the 0 index then it unshift all the other values that are higher than the index of 0. While push just adds an element to the end of your current array and then returns that element. From my understanding of that information the larger number would end up slowing down the unshift array and according to our data that we have gathered it would seem that way. I'm not sure why the unshift is faster at lower numbers though.
